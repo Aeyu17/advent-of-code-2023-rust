@@ -32,7 +32,6 @@ fn main() {
                 ones = c.to_digit(10).unwrap() as i32;
 
             } else if i+3 <= line.len() && num_strings.contains_key(&line[i..i+3]) {
-                let h = &line[i..i+3];
                 if tens == -1 {
                     tens = *num_strings.get(&line[i..i+3]).unwrap();
                 }
