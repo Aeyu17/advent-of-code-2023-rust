@@ -33,12 +33,10 @@ fn main() {
 
             } else if i+3 <= line.len() && num_strings.contains_key(&line[i..i+3]) {
                 let h = &line[i..i+3];
-                println!("{}", h);
                 if tens == -1 {
                     tens = *num_strings.get(&line[i..i+3]).unwrap();
                 }
                 ones = *num_strings.get(&line[i..i+3]).unwrap();
-                println!("{}", ones);
 
             } else if i+4 <= line.len() && num_strings.contains_key(&line[i..i+4]) {
                 if tens == -1 {
@@ -53,22 +51,6 @@ fn main() {
                 ones = *num_strings.get(&line[i..i+5]).unwrap();
             }
         }
-
-        // for c in line.chars() {
-        //     if c.to_digit(10).is_some() {
-        //         tens = c.to_digit(10).unwrap();
-        //         break;
-        //     }
-
-        //     if 
-        // }
-
-        // for c in line.chars().rev() {
-        //     if c.to_digit(10).is_some() {
-        //         ones = c.to_digit(10).unwrap();
-        //         break;
-        //     }
-        // }
 
         sum += tens * 10 + ones;
     }
